@@ -1,6 +1,6 @@
 # MAX Feeder Shield
 
-This project is a work in progress, it is not currently in a working state.
+This project is a work in progress.
 
 This shield is designed to control the [0816 feeders](https://docs.mgrl.de/maschine:pickandplace:feeder:0816feeder:nativeshield) for use with OpenPNP. It plugs into an Arduino Mega and can control up to 34 feeders. 
 
@@ -17,6 +17,7 @@ Open the **"0816feeder.ino"** inside the **"Firmware > 0816feeder"** folder
 Go to **"Tools > Manage Libraries"**
 
 Search for **"EEPROMex"** and install the latest version
+Search for **"SoftServo" by AlexGyver** and install the latest version
 
 Connect to the Arduino Mega over serial by going to **"Tools > Port > COMx"** if you're on a Mac or Linux computer it will display the serial port as "/dev/xxxx"
 
