@@ -17,6 +17,7 @@ Open the **"0816feeder.ino"** inside the **"Firmware > 0816feeder"** folder
 Go to **"Tools > Manage Libraries"**
 
 Search for **"EEPROMex"** and install the latest version
+
 Search for **"SoftServo" by AlexGyver** and install the latest version
 
 Connect to the Arduino Mega over serial by going to **"Tools > Port > COMx"** if you're on a Mac or Linux computer it will display the serial port as "/dev/xxxx"
