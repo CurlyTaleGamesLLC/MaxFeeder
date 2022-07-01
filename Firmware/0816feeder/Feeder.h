@@ -5,9 +5,11 @@
 #include "config.h"
 #include "shield.h"
 #include <Servo.h>
+#include "SoftServo.h"
 #include <EEPROMex.h>
 
 
+//#define SOFT_PIN_NUMBER 3
 
 class FeederClass {
 	protected:
@@ -25,7 +27,6 @@ class FeederClass {
 			tFeederErrorState getFeederErrorState();
 
 	public:
-
 
 	//used to transfer settings between different objects
 	struct sFeederSettings {
@@ -84,11 +85,21 @@ class FeederClass {
 #endif
 	};
 
-	Servo servo;
+  //pins to check for software servo support
+//  const static uint8_t softwarePins[SOFT_PIN_NUMBER] = {
+//    A10,
+//    A12,
+//    A14
+//  };
 
+	Servo servo;
+  SoftServo softServo;
+  bool isSoftServo = false;
+  
 	void initialize(uint8_t _feederNo);
 	bool isInitialized();
 	bool hasFeedbackLine();
+ 
 	void outputCurrentSettings();
 	void setup();
 	sFeederSettings getSettings();

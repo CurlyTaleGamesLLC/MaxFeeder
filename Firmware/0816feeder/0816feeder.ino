@@ -1,6 +1,8 @@
 /*
 * Author: mgrl
 * (c)2017-12-30
+* 
+* Modified by: Curly Tale Games
 *
 * This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 * http://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -15,6 +17,10 @@
 *   - improved setup sequence
 *   - default angle for 2mm feeds corrected according to math
 *
+* v0.4
+*  - added support for MaxFeederShield
+*  - added support for software servo control using SoftServo library by Alex Gyver https://github.com/GyverLibs/SoftServo 
+*    install through Tools > Manage Libraries
 */
 
 #include "config.h"
@@ -154,8 +160,8 @@ void setup() {
 	Serial.println(F("Here is some stuff saved in EEPROM. Paste in a textfile to backup these settings...")); Serial.flush();
 
 	//feeder enable output
-	pinMode(FEEDER_ENABLE_PIN,OUTPUT);
-	digitalWrite(FEEDER_ENABLE_PIN,LOW);
+	//pinMode(FEEDER_ENABLE_PIN,OUTPUT);
+	//digitalWrite(FEEDER_ENABLE_PIN,LOW);
 
 	//power output init
 	for(uint8_t i=0;i<NUMBER_OF_POWER_OUTPUT;i++) {
@@ -188,11 +194,11 @@ void setup() {
 	printCommonSettings();
 
 	//setup feeder objects
-  digitalWrite(FEEDER_ENABLE_PIN, HIGH);  //power feeder first, because while setup feeder might retract.
+  //digitalWrite(FEEDER_ENABLE_PIN, HIGH);  //power feeder first, because while setup feeder might retract.
 	executeCommandOnAllFeeder(cmdSetup);	//setup everything first, then power on short. made it this way to prevent servos from driving to an undefined angle while being initialized
 	delay(1000);		//have the last feeder's servo settled before disabling
   executeCommandOnAllFeeder(cmdDisable); //while setup ran, the feeder were moved and remain in sIDLE-state -> it shall be disabled
-	digitalWrite(FEEDER_ENABLE_PIN, LOW);	//disable power afterwards
+	//digitalWrite(FEEDER_ENABLE_PIN, LOW);	//disable power afterwards
 	
 	//print all settings of every feeder to console
 	executeCommandOnAllFeeder(cmdOutputCurrentSettings);

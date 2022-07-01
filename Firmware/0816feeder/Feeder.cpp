@@ -49,11 +49,29 @@ void FeederClass::outputCurrentSettings() {
 }
 
 void FeederClass::setup() {
+
+  //checks to see if the servo pin used needs to be assigned as a software servo
+  for (int i = 0; i < SOFT_SERVO_NUMBER; i++) {
+    if(softwareServoPins[i] == feederPinMap[this->feederNo]){
+      this->isSoftServo = true;
+    }
+  }
+  
 	//load settings from eeprom
 	this->loadFeederSettings();
 
 	//attach servo to pin, after settings are loaded
-	this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
+  if(this->isSoftServo){
+    this->softServo.attach(feederPinMap[this->feederNo]);
+    softServo.asyncMode();
+    softServo.delayMode();  
+  }
+  else{
+    this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
+  }
+  
+  //this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
+	
 
 	//feedback input
 	//microswitch is active low (NO connected to feedback-pin)
@@ -125,7 +143,15 @@ void FeederClass::gotoPostPickPosition() {
 }
 
 void FeederClass::gotoRetractPosition() {
-	this->servo.write(this->feederSettings.retract_angle);
+  if(this->isSoftServo){
+    this->softServo.attach(feederPinMap[this->feederNo]);
+    this->softServo.write(this->feederSettings.retract_angle); 
+  }
+  else{
+    this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
+    this->servo.write(this->feederSettings.retract_angle);
+  }
+  
 	this->feederPosition=sAT_RETRACT_POSITION;
 	this->feederState=sMOVING;
 	#ifdef DEBUG
@@ -134,7 +160,15 @@ void FeederClass::gotoRetractPosition() {
 }
 
 void FeederClass::gotoHalfAdvancedPosition() {
-	this->servo.write(this->feederSettings.half_advanced_angle);
+  if(this->isSoftServo){
+    this->softServo.attach(feederPinMap[this->feederNo]);
+    this->softServo.write(this->feederSettings.half_advanced_angle);
+  }
+  else{
+    this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
+    this->servo.write(this->feederSettings.half_advanced_angle);
+  }
+  
 	this->feederPosition=sAT_HALF_ADVANCED_POSITION;
 	this->feederState=sMOVING;
 	#ifdef DEBUG
@@ -143,7 +177,16 @@ void FeederClass::gotoHalfAdvancedPosition() {
 }
 
 void FeederClass::gotoFullAdvancedPosition() {
-	this->servo.write(this->feederSettings.full_advanced_angle);
+
+  if(this->isSoftServo){
+    this->softServo.attach(feederPinMap[this->feederNo]);
+    this->softServo.write(this->feederSettings.full_advanced_angle);
+  }
+  else{
+    this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
+    this->servo.write(this->feederSettings.full_advanced_angle);
+  }
+
 	this->feederPosition=sAT_FULL_ADVANCED_POSITION;
 	this->feederState=sMOVING;
 	#ifdef DEBUG
@@ -153,8 +196,15 @@ void FeederClass::gotoFullAdvancedPosition() {
 
 
 void FeederClass::gotoAngle(uint8_t angle) {
-	
-	this->servo.write(angle);
+
+  if(this->isSoftServo){
+    this->softServo.attach(feederPinMap[this->feederNo]);
+    this->softServo.write(angle);
+  }
+  else{
+    this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
+    this->servo.write(angle);
+  }
 	
 	#ifdef DEBUG
 		Serial.print("going to ");
@@ -293,8 +343,13 @@ void FeederClass::disable() {
   
   this->feederState=sDISABLED;
 }
-
+//!!!!!!!!!!!!
+//TODO: Add a start up delay that detaches all the servos
 void FeederClass::update() {
+
+  if(this->isSoftServo){
+    this->softServo.tick();
+  }
 
 #ifdef HAS_FEEDBACKLINES
 	//routine for detecting manual feed via tensioner microswitch.
@@ -374,6 +429,9 @@ void FeederClass::update() {
 		//now servo is expected to have settled at its designated position, so do some stuff
 		if(this->feederState==sADVANCING_CYCLE_COMPLETED) {
 			Serial.println("ok, advancing cycle completed");
+      if(this->isSoftServo){
+        this->softServo.detach();
+      }
 			this->feederState=sIDLE;
 		}
 
@@ -388,6 +446,7 @@ void FeederClass::update() {
 			return;
 		} else {
 			this->feederState=sMOVING;
+      
 		}
 		
 		#ifdef DEBUG

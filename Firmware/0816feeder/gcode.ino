@@ -80,14 +80,14 @@ void processCommand() {
 			if( (_feederEnabled==0 || _feederEnabled==1) ) {
 
 				if((uint8_t)_feederEnabled==1) {
-					digitalWrite(FEEDER_ENABLE_PIN, HIGH);
+					//digitalWrite(FEEDER_ENABLE_PIN, HIGH);
 					feederEnabled=ENABLED;
 
 					executeCommandOnAllFeeder(cmdEnable);
 
 					sendAnswer(0,F("Feeder set enabled and operational"));
 				} else {
-					digitalWrite(FEEDER_ENABLE_PIN, LOW);
+					//digitalWrite(FEEDER_ENABLE_PIN, LOW);
 					feederEnabled=DISABLED;
 
 					executeCommandOnAllFeeder(cmdDisable);

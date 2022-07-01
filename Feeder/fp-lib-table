@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name "CustomDiode")(type "KiCad")(uri "${KIPRJMOD}/Libs/CustomDiode.pretty")(options "")(descr ""))
+  (lib (name "Panelization")(type "KiCad")(uri "${KIPRJMOD}/Libs/Panelization.pretty")(options "")(descr ""))
+  (lib (name "Microswitch")(type "KiCad")(uri "${KIPRJMOD}/Libs/Microswitch.pretty")(options "")(descr ""))
+  (lib (name "PinsClean")(type "KiCad")(uri "${KIPRJMOD}/Libs/PinsClean.pretty")(options "")(descr ""))
+)

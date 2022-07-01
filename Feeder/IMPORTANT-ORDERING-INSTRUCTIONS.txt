@@ -1,0 +1,3 @@
+When ordering add this to the comments for the PCB:
+
+Please V-CUT as indicated in the Eco1_User gerber file.

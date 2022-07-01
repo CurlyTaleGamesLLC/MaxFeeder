@@ -6,6 +6,7 @@
 #define HAS_FEEDBACKLINES
 #define HAS_ANALOG_IN
 #define HAS_POWER_OUTPUTS
+#define SOFT_SERVO_NUMBER 0
 
 /*
 * feederPinMap: Map IO-pins to specific feeder. First feeder is at index 0 (N0). Last feeder is NUMBER_OF_FEEDER-1
@@ -102,5 +103,4 @@ const static uint8_t pwrOutputPinMap[NUMBER_OF_POWER_OUTPUT] = {
   A14,
 };
 
-
-
+const static uint8_t softwareServoPins[SOFT_SERVO_NUMBER] = {};
