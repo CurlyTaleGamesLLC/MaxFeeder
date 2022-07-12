@@ -1,8 +1,14 @@
-# MAX Feeder Shield
+# MAX Feeder & MAX Feeder Shield
 
 This project is a work in progress.
 
-This shield is designed to control the [0816 feeders](https://docs.mgrl.de/maschine:pickandplace:feeder:0816feeder:nativeshield) for use with OpenPNP. It plugs into an Arduino Mega and can control up to 34 feeders. 
+![Max Feeder](/Docs/MaxFeeder.JPG)
+
+This feeder is designed to be set up as an Auto Feeder in OpenPNP. I designed it to mount to a Lumen PNP. It uses an Arduino Mega which listens to GCODE sent over a USB serial connection in Open PNP. The Max Feeder Shield can control up to 34 feeders.
+
+I originally based this design on [the 0816 feeder design from mgrl.](https://docs.mgrl.de/maschine:pickandplace:feeder:0816feeder:nativeshield)
+
+I'd also like to give a should to Nicmoly for making a Lumen PNP Remix of the 0816 feeder.
 
 ## Firmware
 
@@ -29,7 +35,7 @@ Connect to the Arduino Mega over serial by going to **"Tools > Port > COMx"** if
 ### MAX Feeder Shield PCB
 - 1 - MAX Feeder Shield PCB
 - 34 - 4 Pin 2.54mm JST connectors
-- 34 - 4 Pin 2.54mm JST cables 30cm in length
+- 34 - 4 Pin 2.54mm JST cables 100cm in length ("stepper motor cable")
 - 1 - Arduino Mega
 - 1 - 10uf Capacitor
 - 1 - Barrel Jack
@@ -38,7 +44,18 @@ Connect to the Arduino Mega over serial by going to **"Tools > Port > COMx"** if
 - 1 - 5v DC 5A Power Supply
 - LOTS of 2.54mm Male Header
 
-### 0816 Feeders
-
-Full list of hardware here
-[https://docs.mgrl.de/maschine:pickandplace:feeder:0816feeder:mechanics](https://docs.mgrl.de/maschine:pickandplace:feeder:0816feeder:mechanics)
+### MAX Feeder
+- 1 - MAX Feeder PCB
+- 3D printed files in the "3D" folder
+- - FeederPokerPETG.3mf must be printed in PETG
+- 4 - 3M 6mm screws
+- 3 - 3M 20mm screws
+- 1 - [SPDT Limit Switch](https://www.amazon.com/dp/B088W8WMTB)
+- 1 - 1N4001 Diode
+- 1 - 5 pin 2.54mm Angled Male Header
+- 1 - 2 pin 2.54mm Female header cable
+- 1 - N20 Geared DC Motor 60 RPM
+- 1 - 9G SG90 Servo
+- 1 - [2mm diameter rod cut to 12mm in length](https://www.amazon.com/dp/B0962RMLVJ)
+- [Replacement Pen Springs](https://www.amazon.com/dp/B089JYV7BT)
+- [Latex Free Orthodontic Elastics](https://www.amazon.com/dp/B08NCK1K6P)
