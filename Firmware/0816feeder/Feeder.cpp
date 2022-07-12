@@ -428,6 +428,7 @@ void FeederClass::update() {
 
 		//now servo is expected to have settled at its designated position, so do some stuff
 		if(this->feederState==sADVANCING_CYCLE_COMPLETED) {
+      //Serial.print(this->feederNo);
 			Serial.println("ok, advancing cycle completed");
       if(this->isSoftServo){
         this->softServo.detach();

@@ -12,20 +12,20 @@
 * feederPinMap: Map IO-pins to specific feeder. First feeder is at index 0 (N0). Last feeder is NUMBER_OF_FEEDER-1
 */
 const static uint8_t feederPinMap[NUMBER_OF_FEEDER] = {
-  A0,    // Servo Feeder 1
-  A2,    // Servo Feeder 2
+  A0,    // Servo Feeder 0
+  A2,    // Servo Feeder 1
   A4,    //...
+  A5,
   A6,
+  A7,
   A8,
-  A10, //soft //A5
-  A12, //soft //A7
-  A14, //soft //A9
+  A9,
   53,
   51,
   49,
-  47, // Servo Feeder 12
+  47, // Servo Feeder 11
 
-  45, // Servo Feeder 13
+  45, // Servo Feeder 12
   27,
   43,
   29,
@@ -34,20 +34,20 @@ const static uint8_t feederPinMap[NUMBER_OF_FEEDER] = {
   39,
   33,
   37,
-  35, // Servo Feeder 22
+  35, // Servo Feeder 21
 
-  12, // Servo Feeder 23
+  12, // Servo Feeder 22
   10,
   8,
   6,
   4,
   2,
-  15,
-  17,
-  19,
+  14,
+  16,
+  18,
   21,
   23,
-  25 // Servo Feeder 34
+  25 // Servo Feeder 33
 };
 
 
@@ -58,42 +58,43 @@ const static uint8_t feederPinMap[NUMBER_OF_FEEDER] = {
 * to disable feedback-functionality completely at compile-time set pin to -1
 */
 const static int8_t feederFeedbackPinMap[NUMBER_OF_FEEDER] = {
-  A1,    // Feeder Feedback 1
-  A3,    // Feeder Feedback 2
-  A5,    //...
-  A7,
-  A9,
+  A1,    // Feeder Feedback 0
+  A3,    // Feeder Feedback 1
+  A10,
   A11,
+  A12,
   A13,
+  A14,
   A15,
+  
   52,
   50,
   48,
-  46, // Feeder Feedback 12
+  46, // Feeder Feedback 11
 
-  44, // Feeder Feedback 13
+  44, // Feeder Feedback 12
   26,
   42,
   28,
   40,
   30,
-  38,
-  32,
+  38, // 18
+  32, // 19
   36,
-  34, // Feeder Feedback 22
+  34, // Feeder Feedback 21
 
-  13, // Feeder Feedback 23
+  13, // Feeder Feedback 22
   11,
   9,
   7,
   5,
   3,
-  14,
-  16,
-  18,
+  15,
+  17,
+  19,
   20,
   22,
-  24 // Feeder Feedback 34
+  24 // Feeder Feedback 33
 
 };
 
