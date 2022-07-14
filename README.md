@@ -2,13 +2,17 @@
 
 This project is a work in progress.
 
+![Max Feeder Shield Front](/Docs/max-front.jpg)
+
+![Max Feeder Shield Back](/Docs/max-back.jpg)
+
 ![Max Feeder](/Docs/MaxFeeder.JPG)
 
 This feeder is designed to be set up as an Auto Feeder in OpenPNP. I designed it to mount to a Lumen PNP. It uses an Arduino Mega which listens to GCODE sent over a USB serial connection in Open PNP. The Max Feeder Shield can control up to 34 feeders.
 
 I originally based this design on [the 0816 feeder design from mgrl.](https://docs.mgrl.de/maschine:pickandplace:feeder:0816feeder:nativeshield)
 
-I'd also like to give a should to Nicmoly for making a Lumen PNP Remix of the 0816 feeder.
+I'd also like to give a shout out to Nicmoly for making a Lumen PNP Remix of the 0816 feeder.
 
 ## Firmware
 
