@@ -63,3 +63,35 @@ Connect to the Arduino Mega over serial by going to **"Tools > Port > COMx"** if
 - 1 - [2mm diameter rod cut to 12mm in length](https://www.amazon.com/dp/B0962RMLVJ)
 - [Replacement Pen Springs](https://www.amazon.com/dp/B089JYV7BT)
 - [Latex Free Orthodontic Elastics](https://www.amazon.com/dp/B08NCK1K6P)
+
+
+## 3D Prints
+
+![Max Feeder Parts](/Docs/3mf.jpg)
+
+Included is a 3MF file which as all the parts oriented and ready to print in one file, or if your slicer doesn't support 3MF included are the individual STL files.
+
+These files were designed to be printed with a standard 0.4mm nozzle, and without supports.
+
+# Feeder Assembly
+
+![Pressure Arm](/Docs/assembly_01_pressure_arm.jpg)
+Connect the Pressure Arm onto Feeder Base. Slide Pen Spring and 3D printed washer onto M3 20mm screw. Screw the Pressure Arm onto Feeder Base.
+
+![Servo Poker Arm](/Docs/assembly_02_servo_poker.jpg)
+Using one of the screws from the Servo kit, and an M3 6mm screw assemble the Poker Arm as shown. Using a knife, cut the tip of the Poker Arm. Push the 2mm diameter rod through the Poker Arm
+
+![Servo and Pressure Arm](/Docs/assembly_03_poker_pressure.jpg)
+Using an M3 6mm screw, screw the right side of the Servo to the Feeder Base. Slide the Poker arm into the feeder base.
+
+![Tape Motor](/Docs/assembly_04_tape_motor.jpg)
+Using two M3 20mm screws, the N20 geared DC motor, and 3d printed tape gear parts assemble as shown. The 8 tooth gear has a keyed side and a round side, make sure the keyed side slides onto the motor shaft.
+
+![Sub Assemblies](/Docs/assembly_05_pcb_motor.jpg)
+Using an M3 6mm screw attach the tape motor sub assembly to the feeder base. Slide the Feeder PCB into the Feeder Base. Route the wires around the servo, and then back up through the slot on the right as shown.
+
+![Tape Lever](/Docs/assembly_06_lever.jpg)
+Slide the lever 3d print onto the Feeder Base. Loop a Latex-Free Orthodontic Neon Elastic onto the hook on the lever and the hook on the Feeder Base.
+
+![Max Feeder Assembled](/Docs/assembly_07_max_feeder.jpg)
+Using three M3 6mm screws attach the Feeder Cover to the Feeder Base. And you're done!
