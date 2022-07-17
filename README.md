@@ -79,7 +79,7 @@ These files were designed to be printed with a standard 0.4mm nozzle, and withou
 Connect the Pressure Arm onto Feeder Base. Slide Pen Spring and 3D printed washer onto M3 20mm screw. Screw the Pressure Arm onto Feeder Base.
 
 ![Servo Poker Arm](/Docs/assembly_02_servo_poker.jpg)
-Using one of the screws from the Servo kit, and an M3 6mm screw assemble the Poker Arm as shown. Using a knife, cut the tip of the Poker Arm. Push the 2mm diameter rod through the Poker Arm
+From the servo kit, cut the servo horn at the third hole with some side cutters. Use one of the servo kit screws into the 2nd hole to attach it to the poker arm, and an M3 6mm screw assemble the Poker Arm as shown. Using a knife, cut the tip of the Poker Arm. Push the 2mm diameter rod through the Poker Arm
 
 ![Servo and Pressure Arm](/Docs/assembly_03_poker_pressure.jpg)
 Using an M3 6mm screw, screw the right side of the Servo to the Feeder Base. Slide the Poker arm into the feeder base.
