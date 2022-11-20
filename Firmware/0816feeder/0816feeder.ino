@@ -21,6 +21,8 @@
 *  - added support for MaxFeederShield
 *  - added support for software servo control using SoftServo library by Alex Gyver https://github.com/GyverLibs/SoftServo 
 *    install through Tools > Manage Libraries
+*  - added auto detach of servo motors so they don't burn up
+*  - removed need to run M610 S1 command to enable since motors auto turn off
 */
 
 #include "config.h"
@@ -38,7 +40,7 @@ FeederClass feeders[NUMBER_OF_FEEDER];
 enum eFeederEnabledState {
   DISABLED,
   ENABLED,
-} feederEnabled=DISABLED;
+} feederEnabled=ENABLED; //enable feeders by default
 
 // ------ Settings-Struct (saved in EEPROM)
 struct sCommonSettings {
@@ -197,7 +199,10 @@ void setup() {
   //digitalWrite(FEEDER_ENABLE_PIN, HIGH);  //power feeder first, because while setup feeder might retract.
 	executeCommandOnAllFeeder(cmdSetup);	//setup everything first, then power on short. made it this way to prevent servos from driving to an undefined angle while being initialized
 	delay(1000);		//have the last feeder's servo settled before disabling
-  executeCommandOnAllFeeder(cmdDisable); //while setup ran, the feeder were moved and remain in sIDLE-state -> it shall be disabled
+
+  //**** keep the feeders enabled on startup ****
+  executeCommandOnAllFeeder(cmdEnable);
+  // executeCommandOnAllFeeder(cmdDisable); //while setup ran, the feeder were moved and remain in sIDLE-state -> it shall be disabled
 	//digitalWrite(FEEDER_ENABLE_PIN, LOW);	//disable power afterwards
 	
 	//print all settings of every feeder to console
