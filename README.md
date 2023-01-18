@@ -2,13 +2,13 @@
 
 This project is a work in progress.
 
-![Max Feeder Shield Front](/Docs/max-front.jpg)
+![Max Feeder Shield](/Docs/max-front.jpg)
 
-![Max Feeder Shield Back](/Docs/max-back.jpg)
+![Max Feeder 8mm](/Docs/max-feeder-photo.jpg)
 
-![Max Feeder](/Docs/MaxFeeder.JPG)
+![Max Feeder](/Docs/max-feeder-cad.PNG)
 
-This feeder is designed to be set up as an Auto Feeder in OpenPNP. I designed it to mount to a Lumen PNP. It uses an Arduino Mega which listens to GCODE sent over a USB serial connection in Open PNP. The Max Feeder Shield can control up to 34 feeders.
+This feeder is designed to be set up as an AutoFeeder in OpenPNP. I designed it to mount to a Lumen PNP. It uses an Arduino Mega which listens to GCODE sent over a USB serial connection in Open PNP. The Max Feeder Shield can control up to 34 feeders.
 
 I originally based this design on [the 0816 feeder design from mgrl.](https://docs.mgrl.de/maschine:pickandplace:feeder:0816feeder:nativeshield)
 
@@ -36,24 +36,24 @@ Connect to the Arduino Mega over serial by going to **"Tools > Port > COMx"** if
 
 ## Hardware
 
-### MAX Feeder Shield PCB
+### MAX Feeder Shield
 - 1 - MAX Feeder Shield PCB
 - 34 - 4 Pin 2.54mm JST connectors
-- 34 - [4 Pin 2.54mm JST cables 100cm in length ("stepper motor cable")](https://www.amazon.com/Wires-Motor-XH2-54-4P-PH2-0-6P-Printers-Accessories%EF%BC%8C3D/dp/B08PV6XGK2/)
 - 1 - Arduino Mega
 - 1 - 10uf Capacitor
 - 1 - Barrel Jack
 - 1 - 3.81mm Screw Terminal - Optional
 - 1 - 6mm Through Hole Tacticle Switch
-- 1 - 5v DC 5A Power Supply
+- 1 - 5v DC 3A (or more) Power Supply
 - LOTS of 2.54mm Male Header
+- Mounting Bracket in the "3D" folder
 
 ### MAX Feeder
 - 1 - MAX Feeder PCB
 - 3D printed files in the "3D" folder
-- - FeederPokerPETG.3mf must be printed in PETG
-- 4 - [3M 6mm screws](https://www.amazon.com/Alloy-Steel-Socket-Screws-Black/dp/B00W8YSCIS/)
-- 3 - [3M 20mm screws](https://www.amazon.com/Prime-Line-9180478-Socket-Screws-10-Pack/dp/B07D5S3154/)
+- 5 - [M3 6mm screws](https://www.amazon.com/Alloy-Steel-Socket-Screws-Black/dp/B00W8YSCIS/)
+- 1 - [4 Pin 2.54mm JST cables 100cm in length ("stepper motor cable")](https://www.amazon.com/Wires-Motor-XH2-54-4P-PH2-0-6P-Printers-Accessories%EF%BC%8C3D/dp/B08PV6XGK2/)
+- 3 - [M3 20mm screws](https://www.amazon.com/Prime-Line-9180478-Socket-Screws-10-Pack/dp/B07D5S3154/)
 - 1 - [SPDT Limit Switch](https://www.amazon.com/dp/B088W8WMTB)
 - 1 - [1N4001 Diode](https://www.amazon.com/MCIGICM-Rectifier-Electronic-Silicon-Doorbell/dp/B071YWNBVM/)
 - 1 - [5 pin 2.54mm Angled Male Header](https://www.amazon.com/Antrader-2-54mm-Right-Header-Connector/dp/B07M88GRHG/)
@@ -69,22 +69,28 @@ Connect to the Arduino Mega over serial by going to **"Tools > Port > COMx"** if
 
 ![Max Feeder Parts](/Docs/3mf.jpg)
 
-Included is a 3MF file which as all the parts oriented and ready to print in one file, or if your slicer doesn't support 3MF included are the individual STL files.
+Included are two 3MF files which has all the parts oriented and ready to print. Also there are the individual STL files if your slicer doesn't support 3MF files.
 
-These files were designed to be printed with a standard 0.4mm nozzle, and without supports.
+The files that need to printed with a 0.4mm nozzle are labeled, all the other parts can be printed with 0.4mm, 0.6mm, or 0.8mm nozzles. Everything is designed to be printed without supports.
 
 # Feeder Assembly
+
+## These pictures, and a few of the steps are out of date, but still serve as a good general guide.
 
 ![Pressure Arm](/Docs/assembly_01_pressure_arm.jpg)
 Connect the Pressure Arm onto Feeder Base. Slide Pen Spring and 3D printed washer onto M3 20mm screw. Screw the Pressure Arm onto Feeder Base. Don't screw it in all the way, the Pressure Arm should be able to move up and down.
 
 ![Servo Poker Arm](/Docs/assembly_02_servo_poker.jpg)
-From the servo kit, cut the servo horn at the third hole with some side cutters. Use one of the servo kit screws into the 2nd hole to attach it to the poker arm, and an M3 6mm screw assemble the Poker Arm as shown. The screws should be loose enough that the pieces of the poker arm can still move. Using a knife, cut the tip of the Poker Arm. Push the 2mm diameter rod through the Poker Arm.
+Using a knife, cut the tip of the Poker Arm. Using some pliers push the 2mm diameter rod through the Poker, it should be a very tight fit. 
+
+From the servo kit, cut the servo horn at the third hole with some side cutters. Use one of the servo kit screws into the 2nd hole to screw it into the hole of the poker arm that has a small dot in the print. Screw the M3 6mm screw into the Poker Arm as shown. The screws should be tight but loose enough that the pieces of the poker arm can still move. 
 
 ![Servo and Pressure Arm](/Docs/assembly_03_poker_pressure.jpg)
 Using an M3 6mm screw, screw the right side of the Servo to the Feeder Base. Slide the Poker arm into the feeder base.
 
 ![Tape Motor](/Docs/assembly_04_tape_motor.jpg)
+This part is out of date.
+
 Using two M3 20mm screws, the N20 geared DC motor, and 3d printed tape gear parts assemble as shown. The 8 tooth gear has a keyed side and a round side, make sure the keyed side slides onto the motor shaft. 
 
 **PRO TIP:** It's a good idea to not fully tighten the 20mm screws down, when you run the motor the gears need to be broken in. Let it run for a min, then tighten it down. Also don't manually turn the gear on the motor, you can strip out the key gears.

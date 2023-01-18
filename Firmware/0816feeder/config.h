@@ -106,7 +106,7 @@
 #define FEEDER_DEFAULT_HALF_ADVANCED_ANGLE  40              // [°]  exact math would be 43.85. may need tweaking. only needed if advancing half pitch (for 0401 smds) (type: uint8_t)
 #define FEEDER_DEFAULT_RETRACT_ANGLE  0				      // [°]  usually 20, chose 15 to be failsafe (type: uint8_t)
 #define FEEDER_DEFAULT_FEED_LENGTH FEEDER_MECHANICAL_ADVANCE_LENGTH			// [mm] distance to be fed if no feedlength was given in a feed command
-#define FEEDER_DEFAULT_TIME_TO_SETTLE  240			  // [ms] time the servo needs to travel from FEEDER_DEFAULT_FULL_ADVANCED_ANGLE to FEEDER_DEFAULT_RETRACT_ANGLE (type: uint8_t -> max 255ms)
+#define FEEDER_DEFAULT_TIME_TO_SETTLE  255			  // [ms] time the servo needs to travel from FEEDER_DEFAULT_FULL_ADVANCED_ANGLE to FEEDER_DEFAULT_RETRACT_ANGLE (type: uint8_t -> max 255ms)
 /*
 	 0° == ~ 544 µs	--> min, default 544 and seems it fits to the sg90 from tower pro
 	90° ==          --> "middle"
