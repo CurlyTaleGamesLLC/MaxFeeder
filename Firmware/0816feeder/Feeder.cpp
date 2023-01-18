@@ -60,18 +60,18 @@ void FeederClass::setup() {
 	//load settings from eeprom
 	this->loadFeederSettings();
 
+  //!! TODO: this can probably be removed !!
+
 	//attach servo to pin, after settings are loaded
   if(this->isSoftServo){
-    this->softServo.attach(feederPinMap[this->feederNo]);
-    softServo.asyncMode();
-    softServo.delayMode();  
+    //this->softServo.attach(feederPinMap[this->feederNo]);
+    // softServo.asyncMode();
+    // softServo.delayMode();
+    //softServo.detach();  
   }
   else{
-    this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
+    //this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
   }
-  
-  //this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
-	
 
 	//feedback input
 	//microswitch is active low (NO connected to feedback-pin)
@@ -83,7 +83,8 @@ void FeederClass::setup() {
 #endif
 
 	//put on defined position
-	this->gotoRetractPosition();
+	//this->gotoRetractPosition();
+  this->gotoRetractPositionSetup();
 }
 
 FeederClass::sFeederSettings FeederClass::getSettings() {
@@ -154,6 +155,25 @@ void FeederClass::gotoRetractPosition() {
   
 	this->feederPosition=sAT_RETRACT_POSITION;
 	this->feederState=sMOVING;
+	#ifdef DEBUG
+		Serial.println("going to retract now");
+	#endif
+}
+
+void FeederClass::gotoRetractPositionSetup() {
+  //don't energize servos on startup
+
+  // if(this->isSoftServo){
+  //   this->softServo.attach(feederPinMap[this->feederNo]);
+  //   this->softServo.write(this->feederSettings.retract_angle); 
+  // }
+  // else{
+  //   this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
+  //   this->servo.write(this->feederSettings.retract_angle);
+  // }
+  
+	this->feederPosition=sAT_RETRACT_POSITION;
+	this->feederState=sIDLE;
 	#ifdef DEBUG
 		Serial.println("going to retract now");
 	#endif
@@ -343,8 +363,8 @@ void FeederClass::disable() {
   
   this->feederState=sDISABLED;
 }
-//!!!!!!!!!!!!
-//TODO: Add a start up delay that detaches all the servos
+
+
 void FeederClass::update() {
 
   if(this->isSoftServo){
@@ -431,7 +451,12 @@ void FeederClass::update() {
       //Serial.print(this->feederNo);
 			Serial.println("ok, advancing cycle completed");
       if(this->isSoftServo){
+        //Serial.println("software detach");
         this->softServo.detach();
+      }
+      else{
+        //Serial.println("hardware detach");
+        this->servo.detach();
       }
 			this->feederState=sIDLE;
 		}

@@ -43,7 +43,8 @@ class FeederClass {
 		//sFeederState lastFeederState;       //save last position to stay there on poweron? needs something not to wear out the eeprom. until now just go to retract pos.
 	};
 
-	uint8_t remainingFeedLength=0;
+	uint8_t remainingFeedLength=4; //this is a hack to allow servos to initilize immediately
+  // uint8_t remainingFeedLength=0;
 
 	//operational status of the feeder
 	enum sFeederState {
@@ -110,6 +111,7 @@ class FeederClass {
 
 	void gotoPostPickPosition();
 	void gotoRetractPosition();
+  void gotoRetractPositionSetup();
 	void gotoHalfAdvancedPosition();
 	void gotoFullAdvancedPosition();
 	void gotoAngle(uint8_t angle);
