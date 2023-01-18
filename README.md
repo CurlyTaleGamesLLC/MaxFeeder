@@ -103,3 +103,8 @@ Slide the lever 3d print onto the Feeder Base. Loop a Latex-Free Orthodontic Neo
 
 ![Max Feeder Assembled](/Docs/assembly_07_max_feeder.jpg)
 Using three M3 6mm screws attach the Feeder Cover to the Feeder Base, don't over tighten, you are threading into plastic. And that's it! You're done!
+
+
+# Open PnP AutoFeeder Configuration
+
+### Documentation for this is coming soon
