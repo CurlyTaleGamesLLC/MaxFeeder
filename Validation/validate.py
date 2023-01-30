@@ -45,7 +45,7 @@ ser.setDTR(True)
 
 # Take a screenshot of a 600x400 pixel section of the screen
 def take_screenshot():
-    screenshot = pyautogui.screenshot(region=(850, 850, 20, 200))
+    screenshot = pyautogui.screenshot(region=(680, 330, 20, 140))
     return screenshot
 
 # Convert the screenshot to a grayscale image
