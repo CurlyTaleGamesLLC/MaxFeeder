@@ -78,7 +78,7 @@ Optional - Clip the feeder onto some 2020 aluminum extrusion and using an M3 T-n
 ![](assembly/025_wedge.jpg)
 Optional - If you don't want to bolt the feeder down, you can screw an M3 20mm screw into the bottom of the feeder and use the 3D printed wedge to hold the feeder in place. This allows you to more easily remove or reposition the feeder.
 
-[](video/servo-adjusment.mp4)
+[](https://user-images.githubusercontent.com/25337335/216263875-0b8626d9-b433-4cdb-8888-c90433fe03b6.mp4)
 
 We want the servos to all have the same start and end position. To ensure that, unplug the servo horn from the servo, plug the JST cable into the Max Feeder Shield, and touble click the tape lever to actuate the servo.
 
