@@ -21,7 +21,7 @@ You will need the following components to finish assembling the Max Feeder
 
 ![](assembly/001_leaf-spring.jpg)
 ![](assembly/002_leaf-spring2.jpg)
-Push the lead spring into the slot on the Feeder Base
+Push the leaf spring into the slot on the Feeder Base
 
 ![](assembly/003_servo1.jpg)
 ![](assembly/004_servo2.jpg)
@@ -78,7 +78,7 @@ Optional - Clip the feeder onto some 2020 aluminum extrusion and using an M3 T-n
 ![](assembly/025_wedge.jpg)
 Optional - If you don't want to bolt the feeder down, you can screw an M3 20mm screw into the bottom of the feeder and use the 3D printed wedge to hold the feeder in place. This allows you to more easily remove or reposition the feeder.
 
-INSERT VIDEO HERE
+[](video/servo-adjusment.mp4)
 
 We want the servos to all have the same start and end position. To ensure that, unplug the servo horn from the servo, plug the JST cable into the Max Feeder Shield, and touble click the tape lever to actuate the servo.
 
