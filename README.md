@@ -73,36 +73,13 @@ Included are two 3MF files which has all the parts oriented and ready to print. 
 
 The files that need to printed with a 0.4mm nozzle are labeled, all the other parts can be printed with 0.4mm, 0.6mm, or 0.8mm nozzles. Everything is designed to be printed without supports.
 
-# Feeder Assembly
+# Feeder Assembly Documentation
 
-## These pictures, and a few of the steps are out of date, but still serve as a good general guide.
+- [PCB Assembly](./Docs/pcb.md)
+- [Servo Poker Assembly](./Docs/poker.md)
+- [Tape Gear Motor Assembly](./Docs/motor.md)
+- [Final Feeder Assembly](./Docs/finishing-assembly.md)
 
-![Pressure Arm](/Docs/assembly_01_pressure_arm.jpg)
-Connect the Pressure Arm onto Feeder Base. Slide Pen Spring and 3D printed washer onto M3 20mm screw. Screw the Pressure Arm onto Feeder Base. Don't screw it in all the way, the Pressure Arm should be able to move up and down.
-
-![Servo Poker Arm](/Docs/assembly_02_servo_poker.jpg)
-Using a knife, cut the tip of the Poker Arm. Using some pliers push the 2mm diameter rod through the Poker, it should be a very tight fit. 
-
-From the servo kit, cut the servo horn at the third hole with some side cutters. Use one of the servo kit screws into the 2nd hole to screw it into the hole of the poker arm that has a small dot in the print. Screw the M3 6mm screw into the Poker Arm as shown. The screws should be tight but loose enough that the pieces of the poker arm can still move. 
-
-![Servo and Pressure Arm](/Docs/assembly_03_poker_pressure.jpg)
-Using an M3 6mm screw, screw the right side of the Servo to the Feeder Base. Slide the Poker arm into the feeder base.
-
-![Tape Motor](/Docs/assembly_04_tape_motor.jpg)
-This part is out of date.
-
-Using two M3 20mm screws, the N20 geared DC motor, and 3d printed tape gear parts assemble as shown. The 8 tooth gear has a keyed side and a round side, make sure the keyed side slides onto the motor shaft. 
-
-**PRO TIP:** It's a good idea to not fully tighten the 20mm screws down, when you run the motor the gears need to be broken in. Let it run for a min, then tighten it down. Also don't manually turn the gear on the motor, you can strip out the key gears.
-
-![Sub Assemblies](/Docs/assembly_05_pcb_motor.jpg)
-Using an M3 6mm screw attach the tape motor sub assembly to the feeder base. Slide the Feeder PCB into the Feeder Base. Route the wires around the servo, and then back up through the slot on the right as shown.
-
-![Tape Lever](/Docs/assembly_06_lever.jpg)
-Slide the lever 3d print onto the Feeder Base. Loop a Latex-Free Orthodontic Neon Elastic onto the hook on the lever and the hook on the Feeder Base.
-
-![Max Feeder Assembled](/Docs/assembly_07_max_feeder.jpg)
-Using three M3 6mm screws attach the Feeder Cover to the Feeder Base, don't over tighten, you are threading into plastic. And that's it! You're done!
 
 
 # Open PnP AutoFeeder Configuration
