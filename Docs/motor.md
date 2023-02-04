@@ -1,6 +1,6 @@
 # Max Feeder Tape Gear Motor Assembly
 
-You will need the following components to assemble the Servo Poker
+You will need the following components to assemble the Tape Gear Motor
 
 - N20 Geared DC motor
 - M3 20mm machine screw
