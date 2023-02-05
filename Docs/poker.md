@@ -15,7 +15,7 @@ You will need the following components to assemble the Servo Poker
 
 ![](poker/servo-note1.jpg)
 ![](poker/servo-note2.jpg)
-Locate the servo horn and depending on the size of the servo horn cut it at either the 2nd or 3rd hole. See above photo.
+Locate the servo horn and depending on the size of the servo horn cut it at either the 2nd or 3rd hole. It should be 6mm from center of the servo screw and the center of the hole you will attach the poker arm to. See above photo.
 
 ![](poker/004_cable.jpg)
 Wrap the servo cable back and forth and use a twist tie to hold it in place.
