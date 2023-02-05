@@ -89,4 +89,4 @@ Now re-attach the servo horn facing straight towards the front of the feeder.
 Using the tiny screw included in the servo horn kit, screw the servo horn onto the servo.
 
 
-### Next Step: COMING SOON - Gcode testing and setup in Open PnP
+### [Next Step: GcodeDriver and AutoFeeder Setup in Open PnP](openpnp.md)
