@@ -3,7 +3,8 @@
 <video autoplay loop muted src="https://user-images.githubusercontent.com/25337335/216802715-1deb94b0-7a2f-4627-93f5-1e41935b5955.mp4">
 </video>
 
-### Tired of using strip feeders on your pick and place machine? The Max Feeder and Max Feeder Shield can fix that!
+## Part Feeding Simplified
+### Designed to automate feeding parts for your Open PnP compatible pick and place machine
 <br/>
 
 This feeder is designed to be set up as an AutoFeeder in OpenPNP. It easily clips to 2020 aluminum extrusion and uses an Arduino Mega to receive Gcode commands sent over a USB serial connection in Open PnP. The Max Feeder Shield can control up to 34 feeders.
