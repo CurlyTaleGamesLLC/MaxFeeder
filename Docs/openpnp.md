@@ -84,7 +84,7 @@ Here is an explaination of what each part of the command is.
 | ------------- | ------------- |
 | `M600`  | Move command for the servo  |
 | `N{Index}`  | index of the feeder you want to move. The `{Index}` will use the index you set in the Actuator  |
-| `F{DoubleValue}`  | The distance in mm to move the tape forward, it gets this value from the `ON Double value` you set in the Actuator   |
+| `F{DoubleValue}`  | The distance in mm to move the tape forward, it gets this value from the `Double value` you set in the feeder later   |
 
 For our feeder the final Gcode that gets sent would be:
 ```
