@@ -46,7 +46,7 @@ Click Apply.
 
 Select the MaxFeeder Gcode Driver and go to the Gcode tab.
 
-Select Default, and then under Setting select COMMAND_CONFIRM_REGEX
+Select Default, and then under Setting select `COMMAND_CONFIRM_REGEX`
 
 Copy and paste this Regex:
 ```
@@ -55,6 +55,15 @@ Copy and paste this Regex:
 Click Apply
 
 This reads the confirmation gcode that the Arduino Mega will send back when it completes a command.
+
+![](openpnp/driver/error-regex.JPG)
+
+Select `COMMAND_ERROR_REGEX` and copy and paste in this Regex:
+```
+^error.*
+```
+
+Click Apply
 
 
 ![](openpnp/driver/007-gcode.JPG)
