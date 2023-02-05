@@ -78,7 +78,7 @@ The files that need to be printed with a 0.4mm nozzle are labeled, all the other
 
 <br/>
 
-![Max Feeder](/Docs/max-feeder-mount.png)
+![Max Feeder](/Docs/max-feeder-mount.PNG)
 
 ## Max Feeder Shield
 
