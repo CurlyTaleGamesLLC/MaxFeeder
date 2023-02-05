@@ -1,6 +1,6 @@
 # MAX Feeder & MAX Feeder Shield
 
-<video loop autoplay src="https://user-images.githubusercontent.com/25337335/216802715-1deb94b0-7a2f-4627-93f5-1e41935b5955.mp4" data-canonical-src="https://user-images.githubusercontent.com/25337335/216802715-1deb94b0-7a2f-4627-93f5-1e41935b5955.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">
+<video autoplay loop muted src="https://user-images.githubusercontent.com/25337335/216802715-1deb94b0-7a2f-4627-93f5-1e41935b5955.mp4" data-canonical-src="https://user-images.githubusercontent.com/25337335/216802715-1deb94b0-7a2f-4627-93f5-1e41935b5955.mp4" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">
 </video>
 
 ### Tired of using strip feeders on your pick and place machine? The Max Feeder and Max Feeder Shield can fix that!
