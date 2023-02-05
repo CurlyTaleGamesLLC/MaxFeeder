@@ -101,3 +101,17 @@ Included is a bracket to bolt a Max Feeder Shield + Arduino Mega compatible micr
 <br/>
 
 ![Max Feeder](/Docs/max-feeder-cad.PNG)
+
+## Notes
+
+There are a few optional parts for the feeder you can print.
+
+### Rod Cutting Jig
+
+There is a rod cutting jig to help cut your own 2mm rod. Screw an M3 screw into the bottom of the jig, insert your 2mm rod, and using a pair of heavy duty angle cutters cut the rod.
+
+### QR Code Cap
+
+This part is attached to the front of your feeder and is designed to have a 1/2" x 1/2" QR code stuck onto it. [Atanisoft](https://github.com/atanisoft) and I have been working on [FeederUtils](https://github.com/atanisoft/FeederUtils), which features a way to import and automatically set up part feeders in Open PnP. The QR code portion of the project is still under development.
+
+[Check it out here](https://github.com/atanisoft/FeederUtils)

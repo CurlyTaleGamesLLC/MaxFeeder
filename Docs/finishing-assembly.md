@@ -63,7 +63,8 @@ Press the Feeder Cover onto the Feeder Base. It can be tricky to line up.
 
 ![](assembly/019_screws.jpg)
 ![](assembly/020_screws2.jpg)
-Flip the feeder over and screw the 3x M3 6mm screws into the holes. Screw them in all the way, but be careful not to overtighten them, you are screwing into plastic.
+Flip the feeder over and screw the 3x M3 6mm screws into the holes. Firmly hold the cover on and screw the M3 screws in all the way, but be careful not to overtighten them, you are screwing into plastic.
+
 
 ![](assembly/021_lever.jpg)
 ![](assembly/022_lever2.jpg)
