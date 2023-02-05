@@ -16,7 +16,7 @@ Select GcodeDriver and click Accept
 
 Rename the driver to MaxFeeder, set the communications type to serial
 
-Select the COM port of the Max Feeder, and se the baud rate and other serial settings to match the screenshot above.
+Select the COM port of the Max Feeder, and set the baud rate and other serial settings to match the screenshot above.
 
 Click Apply.
 
