@@ -82,7 +82,7 @@ Optional - If you don't want to bolt the feeder down, you can screw an M3 20mm s
 <video src="https://user-images.githubusercontent.com/25337335/216263875-0b8626d9-b433-4cdb-8888-c90433fe03b6.mp4" data-canonical-src="https://user-images.githubusercontent.com/25337335/216263875-0b8626d9-b433-4cdb-8888-c90433fe03b6.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">
 </video>
 
-We want the servos to all have the same start and end position. To ensure that, unplug the servo horn from the servo, plug the JST cable into the Max Feeder Shield, and touble click the tape lever to actuate the servo.
+We want the servos to all have the same start and end position. To ensure that, unplug the servo horn from the servo, plug the JST cable into the Max Feeder Shield, and double click the tape lever to actuate the servo.
 
 Now re-attach the servo horn facing straight towards the front of the feeder.
 
