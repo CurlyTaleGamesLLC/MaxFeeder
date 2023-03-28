@@ -17,6 +17,9 @@ You will need the following components to finish assembling the Max Feeder
 - Wedge 3D print - optional
 - T-nut - optional
 
+Don't want to source all these parts?
+[Buy the kit!](https://store.curlytalegames.com/pages/max-feeders)
+
 ## Instructions
 
 ![](assembly/001_leaf-spring.jpg)

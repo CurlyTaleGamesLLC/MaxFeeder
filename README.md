@@ -18,7 +18,7 @@ During development, I also referenced the remix of the 0816 feeder made Nicmoly 
 # Where can I get a Max Feeder?
 
 [I am selling kits of the Max Feeder Shield and kits of 5x 8mm Max Feeders.](https://store.curlytalegames.com/pages/max-feeders)
-> The online store is almost ready, hang tight! It'll be open very soon
+> The online store is now live! Thanks for supporting this open hardware project!
 
 This is an Open Hardware project, so all of the design files and the BOM are included in this repo as well.
 

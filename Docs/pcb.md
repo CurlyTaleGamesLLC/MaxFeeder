@@ -8,6 +8,8 @@ You will need the following components to assemble the Max Feeder PCB
 - 5 pin 2.54mm Angled Male Header
 - 4 Pin JST cable ("Stepper Motor" Cable)
 
+Don't want to source all these parts?
+[Buy the kit!](https://store.curlytalegames.com/pages/max-feeders)
 ## Instructions
 
 ![Cut off the 6 pin end from the 4 pin JST cable](pcb/009_cable.jpg)

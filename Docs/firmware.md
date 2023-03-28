@@ -3,7 +3,7 @@
 To use the Max Feeder Shield you'll need to upload the latest firmware onto an Arduino Mega. 
 
 If you purchased the Max Feeder Shield + Microcontroller from [store.curlytalegames.com](https://store.curlytalegames.com/pages/max-feeders) you can skip this, it comes pre-loaded with the latest firmware. 
-> The online store is almost ready, hang tight! It'll be open very soon
+> The online store is now live! Thanks for supporting this open hardware project!
 
 I have included a modified version the 0816 feeder firmware originally written by mgrl in this repository. I added support for things like Software Servo control, and auto detaching for servos so they don't burn themselves out.
 

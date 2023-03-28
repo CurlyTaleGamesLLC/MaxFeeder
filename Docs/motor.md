@@ -9,6 +9,9 @@ You will need the following components to assemble the Tape Gear Motor
 - 1mm-20deg-8t-key-axel-0.4mm-nozzle 3D Print
 - 1mm-20deg-7t-m3-0.4mm-nozzle 3D Print
 
+Don't want to source all these parts?
+[Buy the kit!](https://store.curlytalegames.com/pages/max-feeders)
+
 ## Instructions
 
 ![](motor/001_key.jpg)

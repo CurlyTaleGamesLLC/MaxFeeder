@@ -2,6 +2,8 @@
 
 You will need at least 1 Max Feeder, and Max Feeder Shield assembled and connected to your computer. As well as Open PnP installed and your pick and place machine configured.
 
+Need the parts to assemble some Max Feeders? [Buy the kit!](https://store.curlytalegames.com/pages/max-feeders)
+
 ## Instructions
 
 ![](openpnp/driver/001-add-driver.JPG)

@@ -11,6 +11,9 @@ You will need the following components to assemble the Servo Poker
 - 2mm Smooth Rod - cut to 13mm in length
 - Twist Tie
 
+Don't want to source all these parts?
+[Buy the kit!](https://store.curlytalegames.com/pages/max-feeders)
+
 ## Instructions
 
 ![](poker/servo-note1.jpg)
