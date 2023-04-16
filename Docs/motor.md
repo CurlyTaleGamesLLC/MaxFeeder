@@ -18,6 +18,9 @@ Don't want to source all these parts?
 ![](motor/002_fit.jpg)
 Take the N20 motor and push it in and pull it out of the keyed 8 tooth gear several times. We want to loosen the hole a little.
 
+![](motor/002b_sharpie.jpg)
+**Pro Tip! Mark the keyed 8 tooth gear with marker to help with lining up the key in the motor shaft.**
+
 ![](motor/003_gear.jpg)
 ![](motor/004_flex.jpg)
 Insert the 8 tooth gear into the housing. The keyed side of the gear should face the left side, and the round side of the gear should fit onto the small bump on the right side of the housing. Bend the housing slightly so the gear will drop into place.
