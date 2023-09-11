@@ -7,7 +7,7 @@ import threading
 class SerialCommunicationApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Serial Communication Application")
+        self.root.title("MAXFeeder Tester")
         self.serial_ports = self.list_serial_ports()
         
         # Create a frame for the serial port connection widgets
