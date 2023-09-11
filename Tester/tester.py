@@ -35,7 +35,7 @@ class SerialCommunicationApp:
         button_frame = tk.Frame(root)
         button_frame.pack()
         
-        for i in range(32):
+        for i in range(34):
             button_text = f"N{i}"
             tk.Button(button_frame, text=button_text, command=lambda text=button_text: self.send_to_serial(text)).pack(side=tk.LEFT)
         
