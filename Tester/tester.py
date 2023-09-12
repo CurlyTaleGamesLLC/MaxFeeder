@@ -90,6 +90,7 @@ class SerialCommunicationApp:
         root.grid_rowconfigure(4, weight=1)
         root.grid_columnconfigure(0, weight=1)
         
+    
 
 
     def list_serial_ports(self):
@@ -148,6 +149,8 @@ class SerialCommunicationApp:
             self.root.update()  # Update the interface to display the new text
 
             # Wait for the user to press a keyboard key
+            
+            
             selected_key = keyboard.read_event(suppress=True).name
 
             # Update the button text with the assigned key
@@ -155,7 +158,8 @@ class SerialCommunicationApp:
 
             # Create a callback function for the button to send serial data associated with the key
             def send_on_key_press():
-                self.send_to_serial(text)
+                if root.focus_displayof():
+                    self.send_to_serial(text)
 
             # Assign the callback function to the button and the keyboard key
             keyboard.add_hotkey(selected_key, send_on_key_press)
@@ -189,4 +193,7 @@ class SerialCommunicationApp:
 if __name__ == "__main__":
     root = tk.Tk()
     app = SerialCommunicationApp(root)
+    focus_check = tk.BooleanVar()
+    root.bind('<FocusIn>', lambda _: focus_check.set(True))
+    root.bind('<FocusOut>', lambda _: focus_check.set(False))
     root.mainloop()
