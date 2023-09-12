@@ -1,2 +1,3 @@
 tk
 pyserial
+keyboard
