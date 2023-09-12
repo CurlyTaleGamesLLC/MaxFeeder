@@ -131,24 +131,35 @@ class SerialCommunicationApp:
             #self.message_text.config(state=tk.DISABLED)
    
    
+
+
     def assign_key(self, text):
-        # Remplacez le texte du bouton par "Press a Key..." pour l'indication
-        self.key_assign_buttons[text].config(text="Press a Key...")
-        self.root.update()  # Mettre à jour l'interface pour afficher le nouveau texte
+        current_assigned_key = self.assigned_keys.get(text, "")
 
-        # Attendre que l'utilisateur appuie sur une touche du clavier
-        selected_key = keyboard.read_event(suppress=True).name
+        if current_assigned_key:
+            # Key is already assigned, unassign it
+            self.assigned_keys[text] = ""
+            self.key_assign_buttons[text].config(text="Assign Key")
+            keyboard.remove_hotkey(current_assigned_key)
+        else:
+            # Assign a new key
+            # Replace the button text with "Press a Key..." for indication
+            self.key_assign_buttons[text].config(text="Press a Key...")
+            self.root.update()  # Update the interface to display the new text
 
-        # Mettre à jour le texte du bouton avec la touche assignée
-        self.key_assign_buttons[text].config(text=selected_key)
+            # Wait for the user to press a keyboard key
+            selected_key = keyboard.read_event(suppress=True).name
 
-        # Créer une fonction de rappel pour le bouton qui enverra les données série associées à la touche
-        def send_on_key_press():
-            self.send_to_serial(text)
-        
-        # Associer la fonction de rappel au bouton et à la touche du clavier
-        keyboard.add_hotkey(selected_key, send_on_key_press)
+            # Update the button text with the assigned key
+            self.key_assign_buttons[text].config(text=selected_key)
 
+            # Create a callback function for the button to send serial data associated with the key
+            def send_on_key_press():
+                self.send_to_serial(text)
+
+            # Assign the callback function to the button and the keyboard key
+            keyboard.add_hotkey(selected_key, send_on_key_press)
+            self.assigned_keys[text] = selected_key
 
     def reset_assigned_keys(self):
         for text in self.buttons.keys():
