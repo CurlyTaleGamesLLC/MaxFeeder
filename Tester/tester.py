@@ -1,6 +1,7 @@
 import tkinter as tk
 import serial
 from tkinter.scrolledtext import ScrolledText
+import tkinter.messagebox  # Importez tkinter.messagebox séparément
 import threading
 import keyboard
 
@@ -106,7 +107,7 @@ class SerialCommunicationApp:
         
         try:
             self.serial_connection = serial.Serial(port, baud_rate)
-            self.serial_status_label.config(text="Serial Status: Connected", fg="green")
+            self.serial_status_label.config(text=f"Serial Status: Connected to {port}", fg="green")
             self.connect_button.config(state=tk.DISABLED)
             self.disconnect_button.config(state=tk.NORMAL)
             self.start_serial_thread()
@@ -114,14 +115,14 @@ class SerialCommunicationApp:
             tk.messagebox.showerror("Connection Error", str(e))
             
     def disconnect_serial(self):
-        if self.serial_connection is not None:
+        if self.serial_connection and self.serial_connection.is_open: 
             self.serial_connection.close()
             self.serial_status_label.config(text="Serial Status: Disconnected", fg="red")
             self.connect_button.config(state=tk.NORMAL)
             self.disconnect_button.config(state=tk.DISABLED)
             
     def send_to_serial(self, text):
-        if self.serial_connection is not None:
+        if self.serial_connection and self.serial_connection.is_open: 
             fx_value = self.fx_menus[text].get()
             message = f"M600 {text} {fx_value}\n"
             self.serial_connection.write(message.encode())
@@ -179,11 +180,12 @@ class SerialCommunicationApp:
     def read_serial(self):
         while True:
             try:
-                data = self.serial_connection.readline().decode("utf-8", errors='replace')
-                self.message_text.config(state=tk.NORMAL)
-                self.message_text.insert(tk.END, data)
-                self.message_text.see(tk.END)
-                self.message_text.config(state=tk.DISABLED)
+                if self.serial_connection and self.serial_connection.is_open: 
+                    data = self.serial_connection.readline().decode("utf-8", errors='replace')
+                    self.message_text.config(state=tk.NORMAL)
+                    self.message_text.insert(tk.END, data)
+                    self.message_text.see(tk.END)
+                    self.message_text.config(state=tk.DISABLED)
             except UnicodeDecodeError as e:
                 self.message_text.config(state=tk.NORMAL)
                 self.message_text.insert(tk.END, "Invalid Character: " + repr(e.object[e.start:e.end]) + "\n")
