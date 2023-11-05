@@ -29,6 +29,8 @@ Wrap the servo cable back and forth and use a twist tie to hold it in place.
 
 ### PCB Tips
 
+![](poker/poker-tips.jpg)
+
 For new builds, snap off a tiny 0.8mm poker tip PCB, and push it onto the poker. The 3D print has a small clip that should hold it in place. Use some Super Glue (CA glue) to secure the PCB to the 3D print. 
 
 If you didn't buy the kit and have some scrap 0.8mm PCBs lying around you can cut them into tiny triangles and glue those in place.
