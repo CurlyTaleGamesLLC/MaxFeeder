@@ -2,14 +2,16 @@
 
 You will need the following components to assemble the Servo Poker
 
-- SG90 Servo
-- SG90 Servo Horn
-- SG90 Servo Screws
+- MG90S Servo
+- MG90S Servo Horn
+- MG90S Servo Screws
 - Poker 3D print
 - Poker Arm 3D print
 - M3 6mm machine screw
 - 2mm Smooth Rod - cut to 13mm in length
 - Twist Tie
+
+Note: the kits have been upgraded to use MG90S servos, however the documentation currently still shows SG90 servos. SG90 servos work reliably for 8mm and 12mm max feeders.
 
 Don't want to source all these parts?
 [Buy the kit!](https://store.curlytalegames.com/pages/max-feeders)
@@ -18,10 +20,22 @@ Don't want to source all these parts?
 
 ![](poker/servo-note1.jpg)
 ![](poker/servo-note2.jpg)
-Locate the servo horn and depending on the size of the servo horn cut it at either the 2nd or 3rd hole. It should be 6mm from center of the servo screw and the center of the hole you will attach the poker arm to. See above photo.
+Locate the servo horn and depending on the size of the servo horn cut it at either the 2nd or 3rd hole. It should be roughly 6mm from center of the servo screw and the center of the hole you will attach the poker arm to. See above photo.
 
 ![](poker/004_cable.jpg)
 Wrap the servo cable back and forth and use a twist tie to hold it in place.
+
+## Poker Tip
+
+### PCB Tips
+
+For new builds, snap off a tiny 0.8mm poker tip PCB, and push it onto the poker. The 3D print has a small clip that should hold it in place. Use some Super Glue (CA glue) to secure the PCB to the 3D print. 
+
+If you didn't buy the kit and have some scrap 0.8mm PCBs lying around you can cut them into tiny triangles and glue those in place.
+
+### Legacy Plastic Tip
+
+Skip this step if you are using the new PCB poker tips (highly recommended).
 
 ![](poker/005_cut_poker.jpg)
 ![](poker/006_cut.jpg)
@@ -29,6 +43,8 @@ Wrap the servo cable back and forth and use a twist tie to hold it in place.
 **Using a fresh blade on a box knife cut the tip of the poker. It's very important to keep the tip of the poker nice and pointy. That point will ratchet over the sprocket holes in the tape when the arm pulls back, and then it will catch in the holes when it moves forward.**
 
 If it's too blunt or if you cut too much off it won't catch the sprocket holes on the 8mm SMD part tape. Don't try to cut it it with a dull blade, you won't get a sharp point and will regret it later.
+
+## Adding Guide Pin
 
 ![](poker/009_rod.jpg)
 ![](poker/010_rod_push.jpg)

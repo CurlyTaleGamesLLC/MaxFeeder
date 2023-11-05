@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "mouse-bites")(type "KiCad")(uri "${KIPRJMOD}/Libs/mouse-bites.pretty")(options "")(descr ""))
+)

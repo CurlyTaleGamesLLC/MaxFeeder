@@ -10,7 +10,6 @@ You will need the following components to finish assembling the Max Feeder
 - Replacement Pen Spring
 - Latex free Orthodontic Elastic band
 - FeederCover 3D print
-- LeafSpingHeavy 3D print
 - PressureArm 3D print
 - PressureArmWasher-0.4mm-nozzle 3D print
 - TapeLever 3D print
@@ -20,11 +19,9 @@ You will need the following components to finish assembling the Max Feeder
 Don't want to source all these parts?
 [Buy the kit!](https://store.curlytalegames.com/pages/max-feeders)
 
-## Instructions
+Note: the leaf spring has been combined with the Feeder Base 3D file. The instructions are still correct, but the photos in the documentation need to be updated. 
 
-![](assembly/001_leaf-spring.jpg)
-![](assembly/002_leaf-spring2.jpg)
-Push the leaf spring into the slot on the Feeder Base
+## Instructions
 
 ![](assembly/003_servo1.jpg)
 ![](assembly/004_servo2.jpg)

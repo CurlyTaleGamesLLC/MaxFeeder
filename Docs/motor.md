@@ -12,6 +12,8 @@ You will need the following components to assemble the Tape Gear Motor
 Don't want to source all these parts?
 [Buy the kit!](https://store.curlytalegames.com/pages/max-feeders)
 
+Note: There are multiple 3D print files included in this repo to account for tolerances of different 3D printers. Print a couple and see which fits the shaft of the motor and M3 20mm screw best for you.
+
 ## Instructions
 
 ![](motor/001_key.jpg)

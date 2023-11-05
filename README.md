@@ -1,4 +1,4 @@
-# MAX Feeder & MAX Feeder Shield
+# Max Feeder
 
 <video autoplay loop muted src="https://user-images.githubusercontent.com/25337335/216802715-1deb94b0-7a2f-4627-93f5-1e41935b5955.mp4">
 </video>
@@ -7,9 +7,11 @@
 ### Designed to automate feeding parts for your Open PnP compatible pick and place machine
 <br/>
 
+![Max Feeders of multiple widths](/Docs/max-feeder-multiple-widths.jpg)
+
 This feeder is designed to be set up as an AutoFeeder in OpenPNP. It easily clips to 2020 aluminum extrusion and uses an Arduino Mega to receive Gcode commands sent over a USB serial connection in Open PnP. The Max Feeder Shield can control up to 34 feeders.
 
-The design of the Max Feeder is based on [the 0816 feeder design from mgrl.](https://docs.mgrl.de/maschine:pickandplace:feeder:0816feeder) However after a year of development I redesigned every piece of it to simplify it as much as possible.
+The design of the Max Feeder is based on [the 0816 feeder design from mgrl.](https://docs.mgrl.de/maschine:pickandplace:feeder:0816feeder) However after two years of development I redesigned every piece of it to improve and simplify the feeder as much as possible.
 
 During development, I also referenced the remix of the 0816 feeder made Nicmoly for the Lumen PNP.
 
@@ -30,8 +32,8 @@ This is an Open Hardware project, so all of the design files and the BOM are inc
 
 ![Max Feeder Shield](/Docs/max-front.jpg)
 
-## MAX Feeder Shield
-- 1 - MAX Feeder Shield PCB
+## Max Feeder Shield
+- 1 - Max Feeder Shield PCB
 - 34 - 4 Pin 2.54mm JST connectors
 - 1 - Arduino Mega
 - 1 - 10uf Capacitor
@@ -46,8 +48,8 @@ This is an Open Hardware project, so all of the design files and the BOM are inc
 
 ![Max Feeder 8mm](/Docs/max-feeder-photo.jpg)
 
-## MAX Feeder
-- 1 - MAX Feeder PCB
+## Max Feeder
+- 1 - Max Feeder PCB
 - 3D printed files in the "3D" folder
 - 5 - [M3 6mm screws](https://www.amazon.com/Alloy-Steel-Socket-Screws-Black/dp/B00W8YSCIS/)
 - 1 - [4 Pin 2.54mm JST cables 100cm in length ("stepper motor cable")](https://www.amazon.com/Wires-Motor-XH2-54-4P-PH2-0-6P-Printers-Accessories%EF%BC%8C3D/dp/B08PV6XGK2/)
@@ -58,7 +60,7 @@ This is an Open Hardware project, so all of the design files and the BOM are inc
 - 1 - [2 pin 2.54mm Female header cable](https://www.amazon.com/Mayata-Female-Jumper-Dupont-Printer/dp/B07H1WDN3R/) or [Female to Female Dupont cables](https://www.amazon.com/EDGELEC-Breadboard-1pin-1pin-Connector-Multicolored/dp/B07GCZVCGS/)
 - 1 - [N20 Geared DC Motor 60 RPM](https://www.aliexpress.com/item/3256803042731079.html?pdp_ext_f=%7B"sku_id":"12000024757391447"%7D)
 - 1 - [9G SG90 Servo](https://www.amazon.com/Dorhea-Helicopter-Airplane-Walking-Compatible/dp/B08FJ27Q1H/)
-- 1 - [2mm diameter rod cut to 12mm in length](https://www.amazon.com/dp/B0962RMLVJ)
+- 1 - [M2 14mm dowel pin](https://www.amazon.com/MroMax-2-5x14mm-Stainless-Rust-Proof-Elements/dp/B07ZF4X7VQ/) or [2mm diameter rod cut to 14mm in length](https://www.amazon.com/dp/B0962RMLVJ)
 - [Replacement Pen Springs](https://www.amazon.com/dp/B089JYV7BT)
 - [Latex Free Orthodontic Elastics](https://www.amazon.com/dp/B08NCK1K6P)
 
@@ -74,7 +76,7 @@ Included are two 3MF files which has all the parts oriented and ready to print. 
 
 The files that need to be printed with a 0.4mm nozzle are labeled, all the other parts can be printed with 0.4mm, 0.6mm, or 0.8mm nozzles. Everything is designed to be printed without supports. If you print with a 0.8mm nozzle you can print a whole feeder in less than 1.5 hours.
 
-[Download the 8mm Max Feeder](/3D/8mm/), 12mm, 16mm, and possibly even 24mm versions will be available soon.
+[Download the 8mm Max Feeder.](/3D/8mm/) [12mm](/3D/12mm/), [16mm](/3D/16mm/), and [24mm](/3D/24mm/) versions are available in beta status. All of the feeder widths use the same hardware. The only difference between them are the 3D print files.
 
 <br/>
 
@@ -102,13 +104,13 @@ Included is a bracket to bolt a Max Feeder Shield + Arduino Mega compatible micr
 
 ![Max Feeder](/Docs/max-feeder-cad.PNG)
 
+## Troubleshooting
+
+If you are still having problems after going through the "Feeder Assembly & Configuration" [here are some solutions to common problems](./Docs/troubleshooting.md)
+
 ## Notes
 
 There are a few optional parts for the feeder you can print.
-
-### Rod Cutting Jig
-
-There is a rod cutting jig to help cut your own 2mm rod. Screw an M3 screw into the bottom of the jig, insert your 2mm rod, and using a pair of heavy duty angle cutters cut the rod.
 
 ### QR Code Cap
 

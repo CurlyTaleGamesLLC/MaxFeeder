@@ -1,0 +1,14 @@
+(footprint "two-bites-45-degree" (version 20221018) (generator pcbnew)
+  (layer "F.Cu")
+  (attr through_hole)
+  (fp_text reference "REF**" (at 0 -0.5 unlocked) (layer "F.SilkS") hide
+      (effects (font (size 1 1) (thickness 0.1)))
+    (tstamp 5aebdac8-bfa8-4ede-af1d-cc3afc51f9a9)
+  )
+  (fp_text value "two-bites-45-degree" (at 0 1 unlocked) (layer "F.Fab") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 9d907ad9-2e12-4ccf-9e36-6626e3492e6c)
+  )
+  (pad "" np_thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers "F&B.Cu" "*.Mask") (tstamp c1ff1724-2041-4b80-b27c-e010cdd95d5e))
+  (pad "" np_thru_hole circle (at 0.75 -0.75) (size 0.5 0.5) (drill 0.5) (layers "F&B.Cu" "*.Mask") (tstamp d7301a58-a167-4524-8248-193cfb1a5f51))
+)

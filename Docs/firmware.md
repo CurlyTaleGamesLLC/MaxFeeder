@@ -15,6 +15,12 @@ I have included a modified version the 0816 feeder firmware originally written b
 
 To flash the firmware onto an Arduino Mega you'll need to install the [Arduino IDE](https://www.arduino.cc/en/software)
 
+![Download Files](/Docs/download-repo.png)
+
+Download a copy of this Github Repo
+
+![Open Arduino Firmware](/Docs/open-firmware.png)
+
 Open the **"0816feeder.ino"** inside the [**"Firmware > 0816feeder"** folder](/Firmware/0816feeder/)
 
 Go to **"Tools > Manage Libraries"**
