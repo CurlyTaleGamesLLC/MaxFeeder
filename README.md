@@ -59,7 +59,7 @@ This is an Open Hardware project, so all of the design files and the BOM are inc
 - 1 - [5 pin 2.54mm Angled Male Header](https://www.amazon.com/Antrader-2-54mm-Right-Header-Connector/dp/B07M88GRHG/)
 - 1 - [2 pin 2.54mm Female header cable](https://www.amazon.com/Mayata-Female-Jumper-Dupont-Printer/dp/B07H1WDN3R/) or [Female to Female Dupont cables](https://www.amazon.com/EDGELEC-Breadboard-1pin-1pin-Connector-Multicolored/dp/B07GCZVCGS/)
 - 1 - [N20 Geared DC Motor 60 RPM](https://www.aliexpress.com/item/3256803042731079.html?pdp_ext_f=%7B"sku_id":"12000024757391447"%7D)
-- 1 - [9G SG90 Servo](https://www.amazon.com/Dorhea-Helicopter-Airplane-Walking-Compatible/dp/B08FJ27Q1H/)
+- 1 - [MG90S Servo 180 degree](https://www.amazon.com/Compatible-Raspberry-Project-Helicopter-Airplane/dp/B0925V3X2S/)
 - 1 - [M2 14mm dowel pin](https://www.amazon.com/MroMax-2-5x14mm-Stainless-Rust-Proof-Elements/dp/B07ZF4X7VQ/) or [2mm diameter rod cut to 14mm in length](https://www.amazon.com/dp/B0962RMLVJ)
 - [Replacement Pen Springs](https://www.amazon.com/dp/B089JYV7BT)
 - [Latex Free Orthodontic Elastics](https://www.amazon.com/dp/B08NCK1K6P)
@@ -103,6 +103,12 @@ Included is a bracket to bolt a Max Feeder Shield + Arduino Mega compatible micr
 <br/>
 
 ![Max Feeder](/Docs/max-feeder-cad.PNG)
+
+## Reel Holder
+
+![Reel holder](/Docs/reels.jpg)
+
+[Download and print this reel holder for your spools of parts](https://www.printables.com/model/343598-smd-reel-holder-for-pick-and-place-machine)
 
 ## Troubleshooting
 
