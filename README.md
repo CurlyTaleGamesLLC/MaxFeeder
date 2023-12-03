@@ -78,6 +78,14 @@ The files that need to be printed with a 0.4mm nozzle are labeled, all the other
 
 [Download the 8mm Max Feeder.](/3D/8mm/) [12mm](/3D/12mm/), [16mm](/3D/16mm/), and [24mm](/3D/24mm/) versions are available in beta status. All of the feeder widths use the same hardware. The only difference between them are the 3D print files.
 
+### Multiple Mounting Options
+
+`FeederBase.stl` and `FeederCover.stl` are designed to clip onto 2020 aluminum extrusion. This is the default configuration of the Max Feeder and it's designed to mount to the Lumen PnP.
+
+`DIN-FeederBase.stl` and `DIN-FeederCover.stl` are designed to clip onto DIN Rail for pick and place machines with a flat mounting surface, like the LitePlacer.
+
+`2040-FeederBase.stl` and `2040-FeederCover.stl` are designed to clip onto 2040 aluminum extrusion. So it will mount to any pick and place machines that the original 0816 feeder can mount to.
+
 <br/>
 
 ![Max Feeder](/Docs/max-feeder-mount.PNG)
@@ -97,7 +105,7 @@ Included is a bracket to bolt a Max Feeder Shield + Arduino Mega compatible micr
 - [Servo Poker Assembly](./Docs/poker.md)
 - [Tape Gear Motor Assembly](./Docs/motor.md)
 - [Final Feeder Assembly](./Docs/finishing-assembly.md)
-- [Open PnP AutoFeeder Configuration](./Docs/finishing-assembly.md)
+- [Open PnP AutoFeeder Configuration](./Docs/openpnp.md)
 - [Loading and Unloading Tape into Max Feeder](./Docs/finishing-assembly.md)
 
 <br/>
