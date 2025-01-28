@@ -143,21 +143,31 @@ void FeederClass::gotoPostPickPosition() {
   }
 }
 
-void FeederClass::gotoRetractPosition() {
-  if(this->isSoftServo){
-    this->softServo.attach(feederPinMap[this->feederNo]);
-    this->softServo.write(this->feederSettings.retract_angle); 
-  }
-  else{
-    this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
-    this->servo.write(this->feederSettings.retract_angle);
-  }
+// void FeederClass::gotoRetractPosition() {
+//   if(this->isSoftServo){
+//     this->softServo.attach(feederPinMap[this->feederNo]);
+//     this->softServo.write(this->feederSettings.retract_angle); 
+//   }
+//   else{
+//     this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
+//     this->servo.write(this->feederSettings.retract_angle);
+//   }
   
-	this->feederPosition=sAT_RETRACT_POSITION;
-	this->feederState=sMOVING;
-	#ifdef DEBUG
-		Serial.println("going to retract now");
-	#endif
+// 	this->feederPosition=sAT_RETRACT_POSITION;
+// 	this->feederState=sMOVING;
+// 	#ifdef DEBUG
+// 		Serial.println("going to retract now");
+// 	#endif
+// }
+
+void FeederClass::gotoRetractPosition() {
+    gotoAngleSmoothly(this->feederSettings.retract_angle);
+    this->feederPosition = sAT_RETRACT_POSITION;
+    this->feederState = sMOVING;
+    
+    #ifdef DEBUG
+        Serial.println("Going to retract position smoothly");
+    #endif
 }
 
 void FeederClass::gotoRetractPositionSetup() {
@@ -179,39 +189,92 @@ void FeederClass::gotoRetractPositionSetup() {
 	#endif
 }
 
-void FeederClass::gotoHalfAdvancedPosition() {
-  if(this->isSoftServo){
-    this->softServo.attach(feederPinMap[this->feederNo]);
-    this->softServo.write(this->feederSettings.half_advanced_angle);
-  }
-  else{
-    this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
-    this->servo.write(this->feederSettings.half_advanced_angle);
-  }
-  
-	this->feederPosition=sAT_HALF_ADVANCED_POSITION;
-	this->feederState=sMOVING;
-	#ifdef DEBUG
-		Serial.println("going to half adv now");
-	#endif
+void FeederClass::gotoAngleSmoothly(uint8_t targetAngle) {
+    int currentAngle = this->feederPosition;
+    int stepDelay = 10; // Time in milliseconds between each small step
+    int stepSize = 5;  // Degrees per step; adjust for smoother movement
+
+    if (currentAngle < targetAngle) {
+        for (int angle = currentAngle; angle <= targetAngle; angle += stepSize) {
+            if (this->isSoftServo) {
+                this->softServo.attach(feederPinMap[this->feederNo]);
+                this->softServo.write(angle);
+            } else {
+                this->servo.attach(feederPinMap[this->feederNo], this->feederSettings.motor_min_pulsewidth, this->feederSettings.motor_max_pulsewidth);
+                this->servo.write(angle);
+            }
+            delay(stepDelay);
+        }
+    } else {
+        for (int angle = currentAngle; angle >= targetAngle; angle -= stepSize) {
+            if (this->isSoftServo) {
+                this->softServo.attach(feederPinMap[this->feederNo]);
+                this->softServo.write(angle);
+            } else {
+                this->servo.attach(feederPinMap[this->feederNo], this->feederSettings.motor_min_pulsewidth, this->feederSettings.motor_max_pulsewidth);
+                this->servo.write(angle);
+            }
+            delay(stepDelay);
+        }
+    }
+
+    this->feederPosition = targetAngle; // Update position tracking
 }
 
+
+void FeederClass::gotoHalfAdvancedPosition() {
+    gotoAngleSmoothly(this->feederSettings.half_advanced_angle);
+    this->feederPosition = sAT_HALF_ADVANCED_POSITION;
+    this->feederState = sMOVING;
+    
+    #ifdef DEBUG
+        Serial.println("Going to half advanced position smoothly");
+    #endif
+}
+
+// void FeederClass::gotoHalfAdvancedPosition() {
+//   if(this->isSoftServo){
+//     this->softServo.attach(feederPinMap[this->feederNo]);
+//     this->softServo.write(this->feederSettings.half_advanced_angle);
+//   }
+//   else{
+//     this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
+//     this->servo.write(this->feederSettings.half_advanced_angle);
+//   }
+  
+// 	this->feederPosition=sAT_HALF_ADVANCED_POSITION;
+// 	this->feederState=sMOVING;
+// 	#ifdef DEBUG
+// 		Serial.println("going to half adv now");
+// 	#endif
+// }
+
+// void FeederClass::gotoFullAdvancedPosition() {
+
+//   if(this->isSoftServo){
+//     this->softServo.attach(feederPinMap[this->feederNo]);
+//     this->softServo.write(this->feederSettings.full_advanced_angle);
+//   }
+//   else{
+//     this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
+//     this->servo.write(this->feederSettings.full_advanced_angle);
+//   }
+
+// 	this->feederPosition=sAT_FULL_ADVANCED_POSITION;
+// 	this->feederState=sMOVING;
+// 	#ifdef DEBUG
+// 		Serial.println("going to full adv now");
+// 	#endif
+// }
+
 void FeederClass::gotoFullAdvancedPosition() {
-
-  if(this->isSoftServo){
-    this->softServo.attach(feederPinMap[this->feederNo]);
-    this->softServo.write(this->feederSettings.full_advanced_angle);
-  }
-  else{
-    this->servo.attach(feederPinMap[this->feederNo],this->feederSettings.motor_min_pulsewidth,this->feederSettings.motor_max_pulsewidth);
-    this->servo.write(this->feederSettings.full_advanced_angle);
-  }
-
-	this->feederPosition=sAT_FULL_ADVANCED_POSITION;
-	this->feederState=sMOVING;
-	#ifdef DEBUG
-		Serial.println("going to full adv now");
-	#endif
+    gotoAngleSmoothly(this->feederSettings.full_advanced_angle);
+    this->feederPosition = sAT_FULL_ADVANCED_POSITION;
+    this->feederState = sMOVING;
+    
+    #ifdef DEBUG
+        Serial.println("Going to full advanced position smoothly");
+    #endif
 }
 
 

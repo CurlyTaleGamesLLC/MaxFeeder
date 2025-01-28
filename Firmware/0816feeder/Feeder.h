@@ -115,6 +115,7 @@ class FeederClass {
 	void gotoHalfAdvancedPosition();
 	void gotoFullAdvancedPosition();
 	void gotoAngle(uint8_t angle);
+  void gotoAngleSmoothly(uint8_t targetAngle);
 	bool advance(uint8_t feedLength, bool overrideError);
 
 	String reportFeederErrorState();
